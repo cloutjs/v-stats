@@ -11,4 +11,4 @@ $teaminfo [team name] - get info about a team<br>
 If you use the source, please credit me. Thanks :)
 
 Contact:<br>
-[Twitter](https://twitter.com/341jasper) - [Telegram](https://t.me/rcntly) - Discord: clout#4108
+[Twitter](https://twitter.com/341jasper) - [Telegram](https://t.me/rcntly) - [Discord](https://discord.com/users/818928136825733170)
