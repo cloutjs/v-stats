@@ -23,10 +23,11 @@ async def on_message(message):
           coun = item["name"]["en"]
       teams = requests.get(f"https://api.projectv.gg/api/v1/frontend/users/{name}/teams?expand=team,team.platforms,team.files")
       if not "description" in teams.text:
-        team = "Not in a team"
+        teamvalue = "Not in a team"
       else:
         team = teams.json()["data"][0]["team"]["name"]
-      link = "https://projectv.gg/teams/" + teams.json()["data"][0]["team"]["slug"]
+        link = "https://projectv.gg/teams/" + teams.json()["data"][0]["team"]["slug"]
+        teamvalue = f"[{team}]({link})"
       try:
         embed = discord.Embed(title=name, description=f"[Profile Link](https://projectv.gg/profile/{name})")
         embed.set_thumbnail(url=r["files"][0]["file"])
@@ -34,7 +35,7 @@ async def on_message(message):
         embed.add_field(name="Created at", value=r["profile"]["created_at"].split("T")[0])
         embed.add_field(name="Account verified?", value=r["verified"])
         embed.add_field(name="Country", value=coun)
-        embed.add_field(name="Team", value=f"[{team}]({link})")
+        embed.add_field(name="Team", value=teamvalue)
         await message.channel.send(embed=embed)
       except:
         await message.channel.send("Sorry, an error occured!")
@@ -61,7 +62,5 @@ async def on_message(message):
         await message.channel.send("Team doesn't exist.")
       else:
         await message.channel.send("Sorry, an error occured!")
-
-
 
 client.run("")
