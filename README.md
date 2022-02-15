@@ -5,8 +5,8 @@ Unofficial Discord bot for projectv.gg
 Project V is a german Valorant tournament website from Riot Games for everyone, from noobs to pros! I have made a little bot with which you can get some information about users and teams.
 
 These are the commands:<br>
-$info [user] - get info about an user<br>
-$teaminfo [team name] - get info about a team<br>
+.info [user] - get info about an user<br>
+.teaminfo [team name] - get info about a team<br>
 
 If you use the source, please credit me. Thanks :)
 
